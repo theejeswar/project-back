@@ -13,6 +13,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 
-app.use('/register', require('./routes/users')); 
+app.use('/register', require('./routes/users'));
+app.use('/login', require('./routes/auth'));
 
 module.exports = app;
